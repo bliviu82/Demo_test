@@ -1,9 +1,13 @@
 // The node label
-export docker_repo="ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world"
+
+def docker_repo="ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world" 
+
   node() {
+    
     stage('commit') {
       checkout scm
       sleep 10
+      echo "my Docker repo is ${docker_repo}"
     }
 
     // Abort here if a newer build has already passed this milestone.
