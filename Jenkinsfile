@@ -5,7 +5,7 @@
     stage('commit') {
       checkout scm
       sleep 10
-      
+      echo "This is the commit stage!"
     }
 
     // Abort here if a newer build has already passed this milestone.
