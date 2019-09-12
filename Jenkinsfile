@@ -1,8 +1,6 @@
 // The node label
 
-
-buildProject {
-  node(ecs) {
+  node() {
     stage('commit') {
       checkout scm
       sleep 10
@@ -24,5 +22,5 @@ buildProject {
     milestone 2
 
   }
- }
+ 
     
