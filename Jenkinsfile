@@ -1,6 +1,3 @@
-library identifier: 'pipeline-library', changelog: false
-
-
 // The node label
 
 
