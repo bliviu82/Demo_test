@@ -1,5 +1,5 @@
 // The node label
-
+docker_repo=ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world
   node() {
     stage('commit') {
       checkout scm
@@ -17,8 +17,8 @@
     stage('docker'){
      sleep 10
       docker pull hello-world
-      docker tag hello-world ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world
-      docker push ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world
+      docker tag hello-world ${docker_repo}
+      docker push ${docker_repo}
     }
     // Abort here if a newer build has already passed this milestone.
     // Means we don't deploy a superseded build.
