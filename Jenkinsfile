@@ -1,5 +1,5 @@
 // The node label
-export docker_repo=ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world
+export docker_repo="ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world"
   node() {
     stage('commit') {
       checkout scm
