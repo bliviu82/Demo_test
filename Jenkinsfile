@@ -27,6 +27,4 @@
     // Means we don't deploy a superseded build.
     milestone 2
 
-  }
- 
-    
+  }   
