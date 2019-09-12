@@ -17,7 +17,7 @@
     }
 
     stage('docker'){
-      echo "my Docker repo is ${docker_repo}"
+      echo "my Docker repo is ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world:latest"
      sleep 10
       sh 'docker pull hello-world'
       sh 'docker tag hello-world:latest ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world:latest'
