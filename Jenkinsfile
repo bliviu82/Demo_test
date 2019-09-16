@@ -22,6 +22,9 @@
       sh 'docker pull hello-world'
       sh 'docker tag hello-world:latest ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world:latest'
       sh 'docker push ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world:latest'
+      
+      sh 'docker tag hello-world:latest 881725155091.dkr.ecr.eu-west-1.amazonaws.com/docker/iata_demo/hello-world:latest'
+      sh 'docker push 881725155091.dkr.ecr.eu-west-1.amazonaws.com/docker/iata_demo/hello-world:latest'
     }
     // Abort here if a newer build has already passed this milestone.
     // Means we don't deploy a superseded build.
