@@ -4,7 +4,7 @@
     
     stage('commit') {
       checkout scm
-      sleep 10
+      sleep 5
       echo "This is the commit stage!"
     }
 
@@ -13,12 +13,12 @@
     milestone 1
 
     stage('acceptance'){
-      sleep 10
+      sleep 5
     }
 
     stage('docker'){
       echo "my Docker repo is ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world:latest"
-     sleep 10
+     sleep 5
       sh 'docker pull hello-world'
       sh 'docker tag hello-world:latest ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world:latest'
       sh 'docker push ec2-34-251-104-14.eu-west-1.compute.amazonaws.com:5000/hello-world:latest'
